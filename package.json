@@ -1,0 +1,30 @@
+{
+  "name": "node-http2-server-push",
+  "version": "1.0.0",
+  "description": "$ cd new_server $ openssl genrsa -des3 -passout pass:x -out server.pass.key 2048",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/node-dev .",
+    "start-advanced": "./node_modules/.bin/node-dev index-advanced.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vruden/node-http2-server-push.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vruden/node-http2-server-push/issues"
+  },
+  "homepage": "https://github.com/vruden/node-http2-server-push#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "morgan": "^1.8.0",
+    "spdy": "^3.4.4"
+  },
+  "devDependencies": {
+    "node-dev": "^3.1.3"
+  }
+}
