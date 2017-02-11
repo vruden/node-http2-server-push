@@ -11,7 +11,7 @@ app.get('/', function (req, res) {
 })
 
 app.get('/pushy', (req, res) => {
-    var stream = res.push('/main.js', {
+    var jquery = res.push('/jquery.js', {
         status: 200, // optional
         method: 'GET', // optional
         request: {
@@ -21,9 +21,22 @@ app.get('/pushy', (req, res) => {
             'content-type': 'application/javascript'
         }
     })
-    stream.on('error', function () {
+    jquery.on('error', function () {
     })
-    stream.end('alert("hello from push stream!");')
+    jquery.end('alert("hello from push stream!");')
+
+    var angular = res.push('/angular.js', {
+        request: {
+            accept: '*/*'
+        },
+        response: {
+            'content-type': 'application/javascript'
+        }
+    })
+    angular.on('error', function () {
+    })
+    angular.end('content of file')
+
     res.end('<script src="/main.js"></script>')
 })
 
