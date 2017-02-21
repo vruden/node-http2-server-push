@@ -37,7 +37,7 @@ app.get('/pushy', (req, res) => {
     })
     angular.end('content of file')
 
-    res.end('<script src="/main.js"></script>')
+    res.end('<script src="/jquery.js"></script><script src="/angular.js"></script>')
 })
 
 
